@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparação de Algoritmos</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="theme-light">
+
+  <div class="app">
+
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">🕰️</div>
+        <div class="title">Bubble vs Quick Sort</div>
+      </div>
+      <div class="controls">
+        <button id="toggleTheme" class="icon">🌙</button>
+      </div>
+    </header>
+
+    <main class="container">
+
+      <section class="panel left">
+        <h2>Configuração</h2>
+
+        <div class="form">
+          <input id="numInput" type="number" placeholder="Quantidade de números" min="2" max="100" value="20">
+          <button id="generateBtn">Gerar Números</button>
+          <button id="resetBtn" class="secondary">Resetar</button>
+        </div>
+
+        <div class="actions">
+          <button id="bubbleBtn">Bubble Sort</button>
+          <button id="quickBtn">Quick Sort</button>
+        </div>
+
+        <div class="meta">
+          <div>Comparações: <span id="comparacoes">0</span></div>
+          <div>Trocas: <span id="trocas">0</span></div>
+          <div>Tempo: <span id="tempo">0</span> ms</div>
+        </div>
+
+        <div id="arrayContainer" class="cards"></div>
+
+        <canvas id="chart" style="margin-top:20px;"></canvas>
+      </section>
+
+      <aside class="panel right">
+        <h3>Histórico</h3>
+        <div id="historicoList"></div>
+      </aside>
+
+    </main>
+
+    <footer class="footer">Protótipo • Bubble vs Quick Sort</footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

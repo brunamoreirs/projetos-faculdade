@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Merge Sort da Padaria</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="theme-light">
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">🥐</div>
+        <div class="title">Merge Sort da Padaria</div>
+      </div>
+      <div class="controls">
+        <button id="toggleTheme" class="icon" aria-label="Alternar tema">🌙</button>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="panel left">
+        <h2>Adicionar Pedido</h2>
+
+        <div class="form">
+          <input id="nome" type="text" placeholder="Nome do cliente" />
+          <input id="horario" type="time" />
+          <button id="addPedido">Adicionar</button>
+        </div>
+
+        <div class="actions">
+          <button id="mergeBtn">Merge Sort</button>
+          <button id="bubbleBtn">Bubble Sort</button>
+          <button id="compararBtn">Comparar Algoritmos</button>
+          <button id="resetBtn" class="secondary">Limpar Pedidos</button>
+        </div>
+
+        <div class="meta">
+          <div>Comparações: <span id="comparacoes">0</span></div>
+          <div>Fusões: <span id="fusoes">0</span></div>
+        </div>
+
+        <h3>Lista de Pedidos</h3>
+        <div id="listaPedidos" class="cards" aria-live="polite"></div>
+      </section>
+
+      <aside class="panel right">
+        <h3>Histórico</h3>
+        <div id="historicoList" class="cards historico"></div>
+        <button id="limparHistorico" class="secondary full">🗑️ Limpar Histórico</button>
+
+        <h3>Visualização</h3>
+        <div class="preview">
+          <div class="muted">Demonstração dos algoritmos com destaque e tempo real.</div>
+        </div>
+        <div class="progressBar"><div id="progressFill"></div></div>
+      </aside>
+    </main>
+
+    <footer class="footer">Protótipo • Merge Sort da Padaria</footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

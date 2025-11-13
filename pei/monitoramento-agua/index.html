@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoramento de Consumo de Água</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Monitoramento de Consumo de Água</h1>
+        <h2>PEI - Projeto Extensionista Integrador</h2>
+
+        <div class="menu">
+            <button onclick="showSection('cadastrar')">Cadastrar Residência</button>
+            <button onclick="showSection('registrar')">Registrar Consumo</button>
+            <button onclick="showSection('acima')">Casas Acima da Média</button>
+            <button onclick="showSection('abaixo')">Casas Abaixo da Média</button>
+        </div>
+
+        <div class="section" id="cadastrar">
+            <h3>Cadastrar Residência</h3>
+            <input type="text" id="morador" placeholder="Nome do morador principal">
+            <input type="number" id="qtdMoradores" placeholder="Quantidade de moradores" min="1">
+            <button onclick="cadastrarCasa()">Cadastrar</button>
+        </div>
+
+        <div class="section" id="registrar" style="display:none;">
+            <h3>Registrar Consumo Mensal</h3>
+            <select id="selectCasa"></select>
+            <input type="number" id="consumoMes" placeholder="Consumo do mês (m³)" min="0">
+            <button onclick="registrarConsumo()">Registrar</button>
+        </div>
+
+        <div class="section" id="acima" style="display:none;">
+            <h3>Casas Acima da Média</h3>
+            <div id="listaAcima"></div>
+        </div>
+
+        <div class="section" id="abaixo" style="display:none;">
+            <h3>Casas Abaixo da Média</h3>
+            <div id="listaAbaixo"></div>
+        </div>
+
+        <div class="section" id="historico">
+            <h3>Histórico de Residências</h3>
+            <div id="cardsResidencias"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
