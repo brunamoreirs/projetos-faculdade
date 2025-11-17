@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Padaria Pão & Prosa</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">
+      <img src="images/logo.png" alt="Logo da Padaria Pão & Prosa">
+      <h1>Pão & Prosa</h1>
+    </div>
+    <nav class="nav">
+      <a href="#home">Início</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#sobre">Sobre Nós</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h2>Pães quentinhos e frescos todos os dias!</h2>
+      <p>Tradição e sabor direto do forno para a sua mesa.</p>
+      <a href="#produtos" class="btn">Conheça nossos produtos</a>
+    </div>
+  </section>
+
+  <section id="produtos" class="produtos">
+    <h2>Nossos Destaques</h2>
+    <div class="produtos-container">
+      <div class="card">
+        <img src="images/paes-artesanais.png" alt="Pães artesanais">
+        <h3>Pães Artesanais</h3>
+        <p>Feitos com fermentação natural e muito carinho.</p>
+      </div>
+      <div class="card">
+        <img src="images/bolo-caseiro.png" alt="Bolos caseiros">
+        <h3>Bolos Caseiros</h3>
+        <p>Sabor de infância em cada fatia.</p>
+      </div>
+      <div class="card">
+        <img src="images/xicara-cafe.png" alt="Cafés especiais">
+        <h3>Cafés Especiais</h3>
+        <p>O acompanhamento perfeito para o seu momento.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" class="sobre">
+    <h2>Sobre Nós</h2>
+    <p>
+      A <strong>Pão & Prosa</strong> nasceu do amor do Seu Joaquim por panificação artesanal.
+      Desde 2001, nossa padaria é um ponto de encontro no bairro onde o cheiro do pão quentinho e boas conversas se misturam.
+    </p>
+  </section>
+
+  <section id="contato" class="contato">
+    <h2>Fale Conosco</h2>
+    <form id="form-contato" action="https://formspree.io/f/manlrpwd" method="POST">
+      <label for="nome">Seu nome:</label>
+      <input type="text" name="nome" id="nome" required>
+
+      <label for="email">Seu e-mail:</label>
+      <input type="email" name="email" id="email" required>
+
+      <label for="mensagem">Sua mensagem:</label>
+      <textarea name="message" id="mensagem" required></textarea>
+
+      <button type="submit" class="btn">Mande sua mensagem</button>
+    </form>
+    <p id="feedback"></p>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Padaria Pão & Prosa | Feito com ❤️ Protótipo de site para padaria</p>
+    <div class="redes">
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram"></a>
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+    </div>
+  </footer>
+
+  <button id="btnTopo">↑</button>
+  <button id="toggleTheme" title="Alternar tema">🌙</button>
+  <script src="script.js"></script>
+</body>
+</html>
+
