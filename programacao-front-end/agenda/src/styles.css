@@ -1,0 +1,51 @@
+
+body {
+  background-color: #f5f7fa;
+  color: #212529;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-mode .card {
+  background-color: #1f1f1f;
+  color: #f1f1f1;
+  border: 1px solid #333;
+}
+
+body.dark-mode .card-header {
+  background-color: #0d6efd;
+}
+
+body.dark-mode .table {
+  background-color: #1f1f1f;
+  color: #f8f9fa;
+}
+
+body.dark-mode .modal-content {
+  background-color: #1e1e1e;
+  color: #f8f9fa;
+}
+
+body.dark-mode .btn-light {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+body.dark-mode .btn-secondary {
+  background-color: #333;
+  color: #f8f9fa;
+}
+
+body.dark-mode .alert-success {
+  background-color: #0f5132;
+  color: #d1e7dd;
+}
+
+body.dark-mode .alert-danger {
+  background-color: #842029;
+  color: #f8d7da;
+}
