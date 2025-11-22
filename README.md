@@ -15,6 +15,9 @@ Olá! 👋 Este repositório contém todos os meus códigos e projetos desenvolv
   - Jogo de Adivinhação
 - **PEI (Projeto Estacionista)**
   - Monitoramento de Água
+- **(Programação Front-End)**
+  - Agenda
+  - Landing Page
 
 ---
 
