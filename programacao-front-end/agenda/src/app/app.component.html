@@ -1,0 +1,9 @@
+<div class="theme-btn">
+  <button class="btn btn-outline-secondary" (click)="alterarTema()">
+    {{ temaService.isDark() ? '🌞' : '🌙' }}
+  </button>
+</div>
+
+<app-toast></app-toast>
+
+<router-outlet></router-outlet>

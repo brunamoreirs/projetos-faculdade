@@ -1,0 +1,108 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #222222;
+  --card-bg: #ffffff;
+  --card-border: #dddddd;
+  --table-header-bg: #cfe2ff;
+  --input-bg: #ffffff;
+  --input-text: #222222;
+}
+
+.dark-mode {
+  --bg-color: #181818;
+  --text-color: #f5f5f5;
+  --card-bg: #202020;
+  --card-border: #3a3a3a;
+  --table-header-bg: #2a2a2a;
+  --input-bg: #2a2a2a;
+  --input-text: #ffffff;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.card {
+  background: var(--card-bg) !important;
+  border-color: var(--card-border) !important;
+  color: var(--text-color) !important;
+}
+
+.table-primary {
+  background: var(--table-header-bg) !important;
+  color: var(--text-color) !important;
+}
+
+table tbody td {
+  color: var(--text-color);
+}
+
+input.form-control {
+  background: var(--input-bg) !important;
+  color: var(--input-text) !important;
+  border: 1px solid var(--card-border) !important;
+}
+
+label {
+  color: var(--text-color) !important;
+}
+
+h3, h1, h2, h4, h5, h6 {
+  color: var(--text-color) !important;
+}
+
+.btn {
+  color: var(--text-color);
+}
+
+.theme-btn {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 9999;
+}
+
+.toast-container {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  z-index: 20000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 320px;
+}
+.toast-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+  color: #fff;
+  font-weight: 500;
+}
+.toast-item.success {
+  background: linear-gradient(90deg,#198754,#2cc16b);
+}
+.toast-item.error {
+  background: linear-gradient(90deg,#dc3545,#ff6b6b);
+}
+.toast-item.info {
+  background: linear-gradient(90deg,#0d6efd,#66a6ff);
+}
+.toast-close {
+  background: transparent;
+  border: none;
+  color: rgba(255,255,255,0.9);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 6px;
+}
+.toast-message {
+  flex: 1;
+  margin-right: 8px;
+  word-break: break-word;
+}

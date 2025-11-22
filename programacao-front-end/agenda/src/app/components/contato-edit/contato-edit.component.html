@@ -1,0 +1,44 @@
+<div class="container mt-5">
+  <div class="card p-4 shadow">
+    <h3 class="mb-4">{{ id ? 'Editar Contato' : 'Adicionar Contato' }}</h3>
+
+    <div *ngIf="mensagemErro" class="alert alert-danger">{{ mensagemErro }}</div>
+    <div *ngIf="mensagemSucesso" class="alert alert-success">{{ mensagemSucesso }}</div>
+
+    <form [formGroup]="form" (ngSubmit)="salvar()">
+      <div class="mb-3">
+        <label class="form-label">Nome</label>
+        <input class="form-control" formControlName="nome" />
+        <div *ngIf="nome?.touched && nome?.invalid" class="text-danger small">
+          <div *ngIf="nome?.errors?.['required']">Nome é obrigatório.</div>
+          <div *ngIf="nome?.errors?.['minlength']">Nome deve ter ao menos 3 letras.</div>
+          <div *ngIf="nome?.errors?.['pattern']">Nome deve conter apenas letras e espaços.</div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">E-mail</label>
+        <input class="form-control" formControlName="email" />
+        <div *ngIf="email?.touched && email?.invalid" class="text-danger small">
+          <div *ngIf="email?.errors?.['required']">E-mail é obrigatório.</div>
+          <div *ngIf="email?.errors?.['email']">E-mail inválido.</div>
+          <div *ngIf="email?.errors?.['pattern']">E-mail deve conter @ e término válido (.com, .com.br, etc).</div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Telefone</label>
+        <input class="form-control" formControlName="telefone" (input)="onPhoneInput($event)" maxlength="15" />
+        <div *ngIf="telefone?.touched && telefone?.invalid" class="text-danger small">
+          <div *ngIf="telefone?.errors?.['required']">Telefone é obrigatório.</div>
+          <div *ngIf="telefone?.errors?.['pattern']">Telefone inválido. Use (99) 9999-9999 ou (99) 99999-9999.</div>
+        </div>
+      </div>
+
+      <div class="d-flex gap-2">
+        <button class="btn btn-primary" type="submit" [disabled]="form.invalid">{{ id ? 'Salvar' : 'Adicionar' }}</button>
+        <button class="btn btn-secondary" type="button" (click)="cancelar()">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+.card {
+  border-radius: 12px;
+}
+
+body.light-mode .btn-dark {
+  background-color: #343a40;
+  color: #fff;
+}
+
+body.dark-mode .btn-dark {
+  background-color: #555 !important;
+  color: #fff !important;
+  border: 1px solid #777;
+}
+
+button.btn {
+  font-weight: 500;
+}
+
+body.light-mode .table {
+  color: #000 !important;
+}
+
+body.dark-mode .table {
+  color: #fff !important;
+}
+
+body.dark-mode .table th {
+  background: #333 !important;
+  color: #fff !important;
+}
+
+body.dark-mode h3 {
+  color: #fff;
+}
