@@ -69,8 +69,8 @@ funcional.
 ### 1️⃣ Clonar o repositório
 
 ``` bash
-git clone
-cd agenda-angular
+git clone https://github.com/brunamoreirs/projetos-faculdade/tree/main/programacao-front-end/agenda
+cd agenda
 ```
 
 ### 2️⃣ Instalar dependências
